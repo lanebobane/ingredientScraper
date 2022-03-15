@@ -1,0 +1,24 @@
+{
+  "name": "ingredientscraper",
+  "version": "1.0.0",
+  "description": "Exploring Cheerio by making an app that gets ingredients from cooking recipes.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lanebobane/ingredientScraper.git"
+  },
+  "author": "Lane Zimmerman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lanebobane/ingredientScraper/issues"
+  },
+  "homepage": "https://github.com/lanebobane/ingredientScraper#readme",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "cheerio": "^1.0.0-rc.10",
+    "util": "^0.12.4"
+  }
+}
