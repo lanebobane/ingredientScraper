@@ -1,9 +1,11 @@
-const {getIngredients} = require('./halfbakedharvest');
-const util = require('util')
+const {halfbakedharvest} = require('./halfbakedharvest');
+const {allrecipes} = require('./allrecipes');
 
 // const programming = getPostTitles('programming');
 // const oldSchoolCool = getPostTitles('olschoolcool');
 
-const url = 'https://www.halfbakedharvest.com/basil-garlic-oil-noodles/'
+const hbh = 'https://www.halfbakedharvest.com/basil-garlic-oil-noodles/';
+const ar = 'https://www.allrecipes.com/recipe/16310/corned-beef-and-cabbage-i/';
 
-let thing = getIngredients(url).then(x => console.log(x));
+halfbakedharvest(hbh).then(x => console.log(x));
+allrecipes(ar).then(y => console.log(y));
