@@ -1,5 +1,3 @@
-const {halfbakedharvest} = require('./halfbakedharvest');
-const {allrecipes} = require('./allrecipes');
 const {getIngredients} = require('./getIngredients');
 
 // https://www.halfbakedharvest.com/basil-garlic-oil-noodles/
