@@ -4,7 +4,7 @@
   "description": "Exploring Cheerio by making an app that gets ingredients from cooking recipes.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha tests --recursive  --exit",
     "scraper": "echo \"Running Ingredient Scraper Demo\" && node ingredientScraper/ingredientScraperDemo.js",
     "cor": "echo \"Running Chain of Responsibility Demo\" && node handlers/demo/handlerDemo.js"
   },
@@ -20,7 +20,10 @@
   "homepage": "https://github.com/lanebobane/ingredientScraper#readme",
   "dependencies": {
     "axios": "^0.26.1",
+    "chai": "^4.3.6",
+    "chai-as-promised": "^7.1.1",
     "cheerio": "^1.0.0-rc.10",
+    "mocha": "^9.2.2",
     "util": "^0.12.4"
   }
 }
