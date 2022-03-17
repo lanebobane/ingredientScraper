@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "scraper": "echo \"Running Ingredient Scraper Demo\" && node ingredientScraper/ingredientScraperDemo.js",
-    "cor": "echo \"Running Chain of Responsibility Demo\" && node handlers/handlerDemo.js"
+    "cor": "echo \"Running Chain of Responsibility Demo\" && node handlers/demo/handlerDemo.js"
   },
   "repository": {
     "type": "git",

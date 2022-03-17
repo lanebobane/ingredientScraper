@@ -1,4 +1,4 @@
-const HandlerChain = require('./HandlerChain')
+const HandlerChain = require('../Handler')
 
 class CupHandler extends HandlerChain
 {

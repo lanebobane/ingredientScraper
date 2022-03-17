@@ -1,5 +1,5 @@
-const UnitHandlerChain = require('./UnitHandlerChain');
-const Ingredient = require('./Ingredient')
+const UnitHandlerChain = require('../unit/UnitHandlerChain')
+const Ingredient = require('../../ingredient/Ingredient')
 
 let chain = new UnitHandlerChain('chainchainchain');
 let cup = new Ingredient('1 cup broth');

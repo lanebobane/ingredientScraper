@@ -7,7 +7,6 @@ class Ingredient
   getIngredient(){
     return this.ingredient;
   }
-
 }
 
 module.exports = Ingredient;
