@@ -1,25 +1,4 @@
-const { isWebAssemblyCompiledModule } = require("util/support/types");
-
-class HandlerChain
-{
-   setNextObj(nextObjInChain){}
-   processIngredient(req){
-     console.log("No handler found for ingredient: " + req.getIngredient());
-     return 'No unit found'
-   }
-}
-
-class Ingredient
-{
-  constructor(ingredient){
-    this.ingredient = ingredient;
-  }
-
-  getIngredient(){
-    return this.ingredient;
-  }
-
-}
+const HandlerChain = require('./HandlerChain')
 
 class CupHandler extends HandlerChain
 {
@@ -71,4 +50,4 @@ class TeaspoonHandler extends HandlerChain
 
 
 
-module.exports = {Ingredient, TeaspoonHandler, CupHandler};
+module.exports = { TeaspoonHandler, CupHandler};

@@ -1,9 +1,7 @@
-
-
 const axios = require('axios');
 const cheerio = require('cheerio');
 
-const getIngredients = async (url, identifier) => {
+const ingredientScraper = async (url, identifier) => {
 	try {
 		const { data } = await axios.get(url);
 		const $ = cheerio.load(data);
@@ -21,4 +19,4 @@ const getIngredients = async (url, identifier) => {
 };
 
 
-module.exports = {getIngredients};
+module.exports = {ingredientScraper};

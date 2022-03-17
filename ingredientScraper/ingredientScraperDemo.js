@@ -1,4 +1,4 @@
-const {getIngredients} = require('./getIngredients');
+const {ingredientScraper} = require('../ingredientScraper');
 
 // https://www.halfbakedharvest.com/basil-garlic-oil-noodles/
 // hbh: 'li.wprm-recipe-ingredient'
@@ -13,19 +13,10 @@ const ar1 = 'https://www.allrecipes.com/recipe/16310/corned-beef-and-cabbage-i/'
 
 // halfbakedharvest(hbh).then(x => console.log(x));
 // allrecipes(ar).then(y => console.log(y));
-let arlist1 = getIngredients(ar1, arid).then(a => console.log(a));
-let hbhlist3 = getIngredients(hbh3, hbhid).then(b => console.log(b));
-let hbhlist1 = getIngredients(hbh1, hbhid).then(b => console.log(b));
-let hbhlist2 = getIngredients(hbh2, hbhid).then(b => console.log(b));
-
-
-function isolateUnits(arr, index){
-  let units = arr.map((ing)=>{
-    let splitIng = ing.split(' ');
-    return splitIng[index]
-  })
-  return units;
-}
+let arlist1 = ingredientScraper(ar1, arid).then(a => console.log(a));
+let hbhlist3 = ingredientScraper(hbh3, hbhid).then(b => console.log(b));
+let hbhlist1 = ingredientScraper(hbh1, hbhid).then(b => console.log(b));
+let hbhlist2 = ingredientScraper(hbh2, hbhid).then(b => console.log(b));
 
 
 // isolate units

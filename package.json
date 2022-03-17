@@ -4,7 +4,9 @@
   "description": "Exploring Cheerio by making an app that gets ingredients from cooking recipes.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scraper": "echo \"Running Ingredient Scraper Demo\" && node ingredientScraper/ingredientScraperDemo.js",
+    "cor": "echo \"Running Chain of Responsibility Demo\" && node handlers/handlerDemo.js"
   },
   "repository": {
     "type": "git",
