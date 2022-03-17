@@ -1,4 +1,4 @@
-const {ingredientScraper} = require('../ingredientScraper');
+const ingredientScraper = require('../ingredientScraper');
 
 // https://www.halfbakedharvest.com/basil-garlic-oil-noodles/
 // hbh: 'li.wprm-recipe-ingredient'
