@@ -14,6 +14,7 @@ class CupHandler extends HandlerChain
   processIngredient(req) {
     const unit = 'cup'
     if (req.getIngredient().split(' ').includes(unit)) {
+      req.setUnit(unit);
       return unit;
     }else{
       return this.nextObjInChain.processIngredient(req);
@@ -35,6 +36,7 @@ class TeaspoonHandler extends HandlerChain
   processIngredient(req) {
     const unit = 'tsp'
     if (req.getIngredient().split(' ').includes(unit)) {
+      req.setUnit(unit);
       return unit;
     }else{
       return this.nextObjInChain.processIngredient(req);

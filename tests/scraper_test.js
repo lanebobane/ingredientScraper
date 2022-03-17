@@ -1,7 +1,7 @@
 const chai = require('chai');
 const { expect } = require('chai');
 const chaiAsPromised = require('chai-as-promised');
-const {ingredientScraper} = require('../ingredientScraper');
+const ingredientScraper = require('../ingredientScraper');
 
 chai.use(chaiAsPromised);
 

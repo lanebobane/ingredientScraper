@@ -14,6 +14,7 @@ class FilletHandler extends HandlerChain
   processIngredient(req) {
     const unit = 'fillet'
     if (req.getIngredient().split(' ').includes(unit)) {
+      req.setUnit(unit);
       return unit;
     }else{
       return this.nextObjInChain.processIngredient(req);
@@ -35,6 +36,7 @@ class CubeHandler extends HandlerChain
   processIngredient(req) {
     const unit = 'cube'
     if (req.getIngredient().split(' ').includes(unit)) {
+      req.setUnit(unit);
       return unit;
     }else{
       return this.nextObjInChain.processIngredient(req);

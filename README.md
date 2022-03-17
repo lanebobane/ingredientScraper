@@ -1,6 +1,11 @@
 # ingredientScraper
 Exploring CheerioJS and Chain of Responsibility by making a simple app that allows the user to input a list of recipe URLs and outputs a tabulated list of ingredients.
 
+## Commands
+
+1. `npm run scraper`: runs a demo of the `ingredientScraper` module.
+2. `npm run cor`: runs a demo of the ingredient handlers.
+
 ## Resources
 
 - https://www.educative.io/collection/page/5429798910296064/5725579815944192/5927001794805760

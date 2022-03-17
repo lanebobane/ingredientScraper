@@ -23,4 +23,4 @@ const ingredientScraper = async (url, identifier) => {
 };
 
 
-module.exports = {ingredientScraper};
+module.exports = ingredientScraper;

@@ -18,12 +18,8 @@ let ings = [cup, tsp, fil, cub, rig];
 let results = [];
 
 for(let ing of ings){
-  let unit = null;
   for(let chain of chains){
-    if(!unit){
-      unit = chain.process(ing);
-      ing.setUnit(unit);
-    }
+    chain.process(ing);
   }
   results.push(ing);
 }
