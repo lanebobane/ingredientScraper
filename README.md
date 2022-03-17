@@ -1,5 +1,5 @@
 # ingredientScraper
-Exploring CheerioJS and Chain of Responsibility by making a simple app that allows the user to input a list of recipe URLs and outputs a tabulated list of ingredients.
+Exploring CheerioJS and Chain of Responsibility by making a simple app that allows the user to input a recipe URL and outputs list of Ingredient objects, populated for quantity, unit and item.
 
 ## Commands
 

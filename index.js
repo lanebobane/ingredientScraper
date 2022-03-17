@@ -26,7 +26,6 @@ const getIngredients = async (url) => {
   })
 
   ingClassObjects.forEach(ing => {
-
     for(let chain of chains){
       chain.process(ing);
     }
