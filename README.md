@@ -17,7 +17,7 @@ Exploring CheerioJS and Chain of Responsibility by making a simple app that allo
 - 1 large head cabbage
 - 1 (8-12 lb) brisket
 - One big-ass pork shoulder
-
+- 1 bay leaf
 
 #### Specialized units
 
@@ -49,3 +49,15 @@ Exploring CheerioJS and Chain of Responsibility by making a simple app that allo
 #### Edge/Undetermined Cases
 
 - 1 clove garlic, smashed. Is this it's own ingredient? If it was in a recipe that contained other garlic, would that garlic be listed separately? For prep they are separate, but for shopping they are the same.
+
+## Most-concise ingredient line
+
+#### Clean
+10 small red potatoes
+
+#### Contains checkbox
+▢ 1 jar (16 ounce)  roasted red peppers, drained
+
+
+
+

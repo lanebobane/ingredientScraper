@@ -1,6 +1,6 @@
 const HandlerChain = require('../Handler')
 
-class CupHandler extends HandlerChain
+class FilletHandler extends HandlerChain
 {
   constructor(){
     super()
@@ -12,19 +12,19 @@ class CupHandler extends HandlerChain
   }
 
   processIngredient(req) {
-    const unit = 'cup'
-    console.log('CupHandler processing ingredient.')
+    const unit = 'fillet'
+    console.log('FilletHandler processing ingredient.')
     if (req.getIngredient().split(' ').includes(unit)) {
-      console.log("Unit 'cup' found in " + req.getIngredient());
+      console.log("Unit 'fillet' found in " + req.getIngredient());
       return unit;
     }else{
-      console.log('Cup not found.');
+      console.log('Fillet not found.');
       return this.nextObjInChain.processIngredient(req);
     }
   }
 }
 
-class TeaspoonHandler extends HandlerChain
+class CubeHandler extends HandlerChain
 {
   constructor(){
     super()
@@ -36,16 +36,16 @@ class TeaspoonHandler extends HandlerChain
   }
 
   processIngredient(req) {
-    const unit = 'tsp'
+    const unit = 'cube'
     console.log('TeasponHandler processing ingredient.')
     if (req.getIngredient().split(' ').includes(unit)) {
-      console.log("Unit 'tsp' found in " + req.getIngredient());
+      console.log("Unit 'cube' found in " + req.getIngredient());
       return unit;
     }else{
-      console.log('tsp not found.');
+      console.log('cube not found.');
       return this.nextObjInChain.processIngredient(req);
     }
   }
 }
 
-module.exports = { TeaspoonHandler, CupHandler};
+module.exports = { FilletHandler, CubeHandler};

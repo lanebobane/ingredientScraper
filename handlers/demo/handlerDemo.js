@@ -1,15 +1,31 @@
 const UnitHandlerChain = require('../unit/UnitHandlerChain')
+const NonUnitHandlerChain = require('../nonunits/NonUnitHandlerChain')
 const Ingredient = require('../../ingredient/Ingredient')
 
-let chain = new UnitHandlerChain('chainchainchain');
+let chain = new UnitHandlerChain('unitchain');
+let nonchain = new NonUnitHandlerChain('nonunitchain');
+
+let chains = [chain, nonchain];
+
 let cup = new Ingredient('1 cup broth');
 let tsp = new Ingredient('1 tsp salt');
-let rig = new Ingredient('1 rig riggity')
+let fil = new Ingredient('1 fillet salmon');
+let cub = new Ingredient('1 cube boullion');
+let rig = new Ingredient('▢ 1 jar (16 ounce) roasted red peppers, drained')
 
-let result1 = chain.process(cup);
-let result2 = chain.process(tsp);
-let result3 = chain.process(rig);
+let ings = [cup, tsp, fil, cub, rig];
 
-console.log(result1);
-console.log(result2);
-console.log(result3);
+let results = [];
+
+for(let ing of ings){
+  let unit = null;
+  for(let chain of chains){
+    if(!unit){
+      unit = chain.process(ing);
+      ing.setUnit(unit);
+    }
+  }
+  results.push(ing);
+}
+
+console.log(results);

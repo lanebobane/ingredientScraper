@@ -1,15 +1,15 @@
-const {CupHandler,TeaspoonHandler} = require('./UnitHandlers')
+const {FilletHandler,CubeHandler} = require('./NonUnitHandlers')
 
 // Configures the handler chain for the "standard units" handlers.
 
 class UnitHandlerChain {
   constructor(name){
     this.name = name;
-    let cup = new CupHandler();
-    let tsp = new TeaspoonHandler();
+    let fillet = new FilletHandler();
+    let cube = new CubeHandler();
     // cup.setNextObj(tsp);
-    tsp.setNextObj(cup);
-    this.firstUnit = tsp;
+    fillet.setNextObj(cube);
+    this.firstUnit = fillet;
   }
 
   process(req){
