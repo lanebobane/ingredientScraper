@@ -54,6 +54,7 @@ Exploring CheerioJS and Chain of Responsibility by making a simple app that allo
 #### Edge/Undetermined Cases
 
 - 1 clove garlic, smashed. Is this it's own ingredient? If it was in a recipe that contained other garlic, would that garlic be listed separately? For prep they are separate, but for shopping they are the same.
+- 4 squares brown rice ramen noodles, or 6 ounces rice noodles. How to handle ORs?
 
 ## Most-concise ingredient line
 
@@ -64,6 +65,9 @@ The `ingredientScraper` gathers the "most concise ingredient" from the source pa
 
 #### Contains checkbox
 ▢ 1 jar (16 ounce)  roasted red peppers, drained
+
+#### OR
+4 squares brown rice ramen noodles, or 6 ounces rice noodles
 
 
 

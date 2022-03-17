@@ -30,17 +30,13 @@ const getIngredients = async (url) => {
       chain.process(ing);
     }
   })
-
-  console.log(ingClassObjects)
-
-
+  return ingClassObjects;
 
 }
 
 const hbh1 = 'https://www.halfbakedharvest.com/basil-garlic-oil-noodles/';
-const hbh2 = 'https://www.halfbakedharvest.com/parchment-baked-roasted-red-pepper-salmon/'
-const hbh3 = 'https://www.halfbakedharvest.com/crispy-chicken-tinga-tacos/'
 const ar1 = 'https://www.allrecipes.com/recipe/16310/corned-beef-and-cabbage-i/';
 
 
-getIngredients(hbh1)
+getIngredients(hbh1).then(a=>console.log(a))
+getIngredients(ar1).then(a=>console.log(a))
