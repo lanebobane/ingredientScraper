@@ -16,7 +16,6 @@ const ingredientScraper = async (url, identifier) => {
 			const postTitle = $(el).text()
 			ingredients.push(postTitle)
 		});
-    // console.log(postTitles)
 		return ingredients;
 	} catch (error) {
 		throw error;
