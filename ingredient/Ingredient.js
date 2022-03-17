@@ -1,5 +1,7 @@
 class Ingredient
 {
+  // quantity, unit and item initalized as null because Ingredient is constructed
+  // before handlers can determine it's values for these keys.
   constructor(ingredient){
     this.ingredient = ingredient;
     this.quantity = null;

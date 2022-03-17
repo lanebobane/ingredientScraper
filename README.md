@@ -5,8 +5,8 @@ Exploring CheerioJS and Chain of Responsibility by making a simple app that allo
 
 - https://www.educative.io/collection/page/5429798910296064/5725579815944192/5927001794805760
 - https://refactoring.guru/design-patterns/chain-of-responsibility
+- https://github.com/webdevjourneyWDJ/Design-Patterns/tree/master/chain_of_responsibility
 - https://www.scrapingbee.com/blog/web-scraping-javascript/
-
 
 ## Different types of ingredients
 
@@ -52,7 +52,9 @@ Exploring CheerioJS and Chain of Responsibility by making a simple app that allo
 
 ## Most-concise ingredient line
 
-#### Clean
+The `ingredientScraper` gathers the "most concise ingredient" from the source page. Due to variation in page design, this may sometimes include undesired characters like checkboxes. That is expected and the ingredient handlers can handle for this.
+
+#### No issues, clean
 10 small red potatoes
 
 #### Contains checkbox
