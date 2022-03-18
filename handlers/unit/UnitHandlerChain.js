@@ -1,4 +1,4 @@
-const {CupHandler,TeaspoonHandler} = require('./UnitHandlers')
+const {CupHandler,TeaspoonHandler,TablespoonHandler} = require('./UnitHandlers')
 
 // Configures the handler chain for the "standard units" handlers.
 
@@ -7,9 +7,10 @@ class UnitHandlerChain {
     this.name = name;
     let cup = new CupHandler();
     let tsp = new TeaspoonHandler();
-    // cup.setNextObj(tsp);
-    tsp.setNextObj(cup);
-    this.firstUnit = tsp;
+    let tbsp = new TablespoonHandler();
+    cup.setNextObj(tsp);
+    tsp.setNextObj(tbsp);
+    this.firstUnit = cup;
   }
 
   process(req){

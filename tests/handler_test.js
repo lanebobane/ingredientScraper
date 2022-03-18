@@ -15,6 +15,9 @@ describe('Ingredient Handlers', () => {
 
   let cup = new Ingredient('1 cup broth');
   let tsp = new Ingredient('1 tsp salt');
+  let tsp_caps = new Ingredient('1 Teaspoon salt')
+  let tsp_allcaps = new Ingredient('1 TEASPOON salt')
+  let tsp_lower = new Ingredient('1 teaspoon salt')
   let rig = new Ingredient('')
 
     describe('Cup Unit Handlers', () => {
@@ -33,8 +36,26 @@ describe('Ingredient Handlers', () => {
 
     describe('Teaspoon Unit Handlers', () => {
       const unit = 'tsp'
-      it('Finds TSP when present',  () => {
+      it('Finds "tsp" when present',  () => {
         const response = chain.process(tsp)
+        expect(response).to.equal(unit);
+        expect(response).to.be.an('string');
+      });
+
+      it('Finds "Teaspoon" when present',  () => {
+        const response = chain.process(tsp_caps)
+        expect(response).to.equal(unit);
+        expect(response).to.be.an('string');
+      });
+
+      it('Finds "TEASPOON" when present',  () => {
+        const response = chain.process(tsp_allcaps)
+        expect(response).to.equal(unit);
+        expect(response).to.be.an('string');
+      });
+
+      it('Finds "teaspoon" when present',  () => {
+        const response = chain.process(tsp_lower)
         expect(response).to.equal(unit);
         expect(response).to.be.an('string');
       });
