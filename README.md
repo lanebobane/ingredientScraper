@@ -71,10 +71,10 @@ Exploring CheerioJS and Chain of Responsibility by making a simple app that allo
 
 ## ingredientScraper Module Architecture
 
-
+![ingredientScraper module architecture](https://github.com/lanebobane/ingredientScraper/blob/main/assets/ingredient_scraper.png)
 
 
 ## Recipe-to-Route Architecture
 
-![module architecture](https://github.com/lanebobane/ingredientScraper/blob/main/assets/module_architecture.png)
+![Recipe-to-Route architecture](https://github.com/lanebobane/ingredientScraper/blob/main/assets/recipe_to_route.png)
 
