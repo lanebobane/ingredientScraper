@@ -69,9 +69,12 @@ Exploring CheerioJS and Chain of Responsibility by making a simple app that allo
 #### Contains checkbox
 ▢ 1 jar (16 ounce)  roasted red peppers, drained
 
-## Architecture
+## ingredientScraper Module Architecture
+
+
+
+
+## Recipe-to-Route Architecture
 
 ![module architecture](https://github.com/lanebobane/ingredientScraper/blob/main/assets/module_architecture.png)
-
-
 
