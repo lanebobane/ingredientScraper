@@ -72,4 +72,42 @@ class TablespoonHandler extends HandlerChain
   }
 }
 
-module.exports = { TeaspoonHandler, CupHandler, TablespoonHandler};
+class OunceHandler extends HandlerChain
+{
+  constructor(){
+    super()
+    this.nextObjInChain = new HandlerChain()
+    this.unit = 'ounce';
+    this.units = ['ounce', 'OUNCE', 'Ounce', 'Oz', 'OZ', 'oz'];
+    this.fluid = ['fluid', 'FLUID', 'fl', 'FL', 'Fluid']
+  }
+
+  setNextObj(nextObj){
+    this.nextObjInChain = nextObj;
+  }
+
+  processIngredient(req) {
+    let journal = {oz: false, fluid: false};
+    let ings = req.getIngredient().split(' ')
+    this.units.forEach(unit => {
+      if (ings.includes(unit)) {
+        // req.setUnit(this.unit);
+        journal.oz = true;
+      }
+    });
+    this.fluid.forEach(fluid => {
+      if (ings.includes(fluid)) {
+        // req.setUnit(this.unit);
+        journal.fluid = true;
+      }
+    });
+    if(journal.oz && journal.fluid) req.setUnit('fluid ounce');
+    else if (journal.oz) req.setUnit('ounce');
+    if(req.getUnit()) return req.getUnit();
+    else return this.nextObjInChain.processIngredient(req);
+  }
+}
+
+
+
+module.exports = { TeaspoonHandler, CupHandler, TablespoonHandler, OunceHandler};

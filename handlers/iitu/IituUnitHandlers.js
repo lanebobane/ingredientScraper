@@ -16,12 +16,11 @@ class IituHandler extends HandlerChain
   processIngredient(req) {
     for(let ing of req.getIngredient().split(' ')){
       let value = parseInt(ing)
-      if(!isNaN(value)){
+      if(typeof value === 'number' && !req.getUnit()) {
         req.setUnit('iitu');
       }
     }
   }
 }
-
 
 module.exports = { IituHandler };
