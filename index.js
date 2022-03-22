@@ -1,13 +1,15 @@
 // Driver code that will basically put together each of the demos (scraper and handler).
 const ingredientScraper = require('./ingredientScraper')
-const UnitHandlerChain = require('./handlers/unit/UnitHandlerChain');
-const NonUnitHandlerChain = require('./handlers/nonunits/NonUnitHandlerChain');
+const ExactUnitHandlerChain = require('./handlers/exact/ExactUnitHandlerChain');
+const NonExactUnitHandlerChain = require('./handlers/nonexact/NonExactUnitHandlerChain');
+const IituUnitHanlderChain = require('./handlers/iitu/IituUnitHandlerChain');
 const Ingredient = require('./ingredient/Ingredient')
 
 // can probably do something better to handle how all the chains are put together.
-let chain = new UnitHandlerChain('unitchain');
-let nonchain = new NonUnitHandlerChain('nonunitchain');
-let chains = [chain, nonchain];
+let chain = new ExactUnitHandlerChain('unitchain');
+let nonchain = new NonExactUnitHandlerChain('nonunitchain');
+let iituchain = new IituUnitHanlderChain('iituunitchain');
+let chains = [chain, nonchain, iituchain];
 
 // logic for deciding a CSS identifier is here for now, until I can build a module
 // to handle for identifying this value.
