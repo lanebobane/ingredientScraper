@@ -18,12 +18,18 @@ Exploring CheerioJS and Chain of Responsibility by making a simple app that allo
 
 #### Exact units
 
+Includes: cup, teaspoon, tablespoon, milliliter, liter, pint, ounce, quart, gallon, fluid ounces,
+gram, kilogram.
+
 - 1 cup chicken broth
 - 2 tsp salt
 - 8 oz ground beef
 - 100 mL water
 
 #### Non-exact units
+Source: (https://ottogrills.com/blogs/post/what-is-tad-dash-smidgen)
+Includes: fillet, dollop, jar, can, clove, cube, pinch, sprinkle, drizzle, gill, slather, tad, dash,
+drop, hint, smidgen, scant.
 
 - 2 fillets salmon
 - 2 dollops of mayonaise
@@ -57,10 +63,10 @@ Exploring CheerioJS and Chain of Responsibility by making a simple app that allo
 
 ## ingredientScraper Module Architecture
 
-![ingredientScraper module architecture](https://github.com/lanebobane/ingredientScraper/blob/main/assets/ingredient_scraper.png)
+![ingredientScraper module architecture](https://github.com/lanebobane/ingredientScraper/blob/main/assets/ingredientScraper.png)
 
 
 ## Recipe-to-Route Architecture
 
-![Recipe-to-Route architecture](https://github.com/lanebobane/ingredientScraper/blob/main/assets/module_architecture.png)
+![Recipe-to-Route architecture](https://github.com/lanebobane/ingredientScraper/blob/main/assets/recipe_to_route.png)
 
