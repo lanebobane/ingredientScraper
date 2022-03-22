@@ -1,8 +1,8 @@
-const {CupHandler,TeaspoonHandler,TablespoonHandler} = require('./UnitHandlers')
+const {CupHandler,TeaspoonHandler,TablespoonHandler} = require('./ExactUnitHandlers')
 
 // Configures the handler chain for the "standard units" handlers.
 
-class UnitHandlerChain {
+class ExactUnitHandlerChain {
   constructor(name){
     this.name = name;
     let cup = new CupHandler();
@@ -18,7 +18,7 @@ class UnitHandlerChain {
   }
 }
 
-module.exports = UnitHandlerChain
+module.exports = ExactUnitHandlerChain
 
 
 

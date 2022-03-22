@@ -1,8 +1,8 @@
-const {FilletHandler,CubeHandler} = require('./NonUnitHandlers')
+const {FilletHandler,CubeHandler} = require('./NonExactUnitHandlers')
 
 // Configures the handler chain for the "standard units" handlers.
 
-class UnitHandlerChain {
+class NonExactHandlerChain {
   constructor(name){
     this.name = name;
     let fillet = new FilletHandler();
@@ -17,7 +17,7 @@ class UnitHandlerChain {
   }
 }
 
-module.exports = UnitHandlerChain
+module.exports = NonExactHandlerChain
 
 
 

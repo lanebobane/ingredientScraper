@@ -1,8 +1,8 @@
 const chai = require('chai');
 const { expect } = require('chai');
 const chaiAsPromised = require('chai-as-promised');
-const UnitHandlerChain = require('../handlers/unit/UnitHandlerChain')
-const NonUnitHandlerChain = require('../handlers/nonunits/NonUnitHandlerChain')
+const ExactUnitHandlerChain = require('../handlers/exact/ExactUnitHandlerChain')
+const NonUnitHandlerChain = require('../handlers/nonexact/NonExactUnitHandlerChain')
 const Ingredient = require('../ingredient/Ingredient')
 
 chai.use(chaiAsPromised);
@@ -11,7 +11,7 @@ describe('Ingredient Handlers', () => {
 
   describe('Standardized Unit Handlers', () => {
 
-  let chain = new UnitHandlerChain('unitchain');
+  let chain = new ExactUnitHandlerChain('unitchain');
 
   let cup = new Ingredient('1 cup broth');
   let tsp = new Ingredient('1 tsp salt');
@@ -35,7 +35,7 @@ describe('Ingredient Handlers', () => {
     });
 
     describe('Teaspoon Unit Handlers', () => {
-      const unit = 'tsp'
+      const unit = 'teaspoon'
       it('Finds "tsp" when present',  () => {
         const response = chain.process(tsp)
         expect(response).to.equal(unit);
