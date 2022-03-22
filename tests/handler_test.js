@@ -18,6 +18,8 @@ describe('Ingredient Handlers', () => {
   let tsp_caps = new Ingredient('1 Teaspoon salt')
   let tsp_allcaps = new Ingredient('1 TEASPOON salt')
   let tsp_lower = new Ingredient('1 teaspoon salt')
+  let fluid_oz = new Ingredient('12 fluid oz')
+  let fluid_ounce = new Ingredient('12 fluid ounce')
   let rig = new Ingredient('')
 
     describe('Cup Unit Handlers', () => {
@@ -65,6 +67,23 @@ describe('Ingredient Handlers', () => {
         expect(response).to.equal(null);
       });
 
+    describe('Fluid Ounce Unit Handlers', () => {
+      const unit = 'fluid ounce'
+      it('Finds FLUID OUNCE when present',  () => {
+        const response = chain.process(fluid_ounce)
+        expect(response).to.equal(unit);
+        expect(response).to.be.an('string');
+      });
+      it('Finds FLUID OZ when present',  () => {
+        const response = chain.process(fluid_oz)
+        expect(response).to.equal(unit);
+        expect(response).to.be.an('string');
+      });
+      it('Does not find CUP when not present',  () => {
+        const response = chain.process(rig)
+        expect(response).to.equal(null);
+      });
+    });
 
 
     });

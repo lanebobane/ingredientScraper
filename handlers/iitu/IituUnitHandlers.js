@@ -1,4 +1,3 @@
-const { isNumber } = require('util');
 const HandlerChain = require('../Handler')
 
 class IituHandler extends HandlerChain
