@@ -5,6 +5,7 @@ Exploring CheerioJS and Chain of Responsibility by making a simple app that allo
 
 1. `npm run scraper`: runs a demo of the `ingredientScraper` module.
 2. `npm run cor`: runs a demo of the ingredient handlers.
+3. `npm run start`: runs the main app.
 
 ## Resources
 
